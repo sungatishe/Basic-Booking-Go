@@ -1,0 +1,20 @@
+{{ template "base" . }}
+
+{{ define "content" }}
+
+<h1>hello guys!</h1>
+<h1>hello guys!</h1>
+
+<h2>ssss:  {{index .StringMap "test"}}</h2>
+
+<h3>
+    {{ if ne (index .StringMap "remoteIP") ""}}
+        Your remoteIP is {{ index .StringMap "remoteIP" }}
+    {{ else }}
+        who are u bro
+    {{ end }}
+</h3>
+
+
+
+{{ end }}
